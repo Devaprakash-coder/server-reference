@@ -1,0 +1,51 @@
+{
+  "name": "pos",
+  "version": "1.0.0",
+  "description": "a web for inventory management",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --max-http-header-size=16000 server.js",
+    "devStart": "nodemon --max-http-header-size=16000 server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/vinopravin/POS.git"
+  },
+  "keywords": [
+    "pos"
+  ],
+  "author": "pravinraj mohan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/vinopravin/POS/issues"
+  },
+  "homepage": "https://gitlab.com/vinopravin/POS#README",
+  "devDependencies": {},
+  "dependencies": {
+    "@socket.io/redis-adapter": "~7.1.0",
+    "@socket.io/sticky": "^1.0.0",
+    "apn": "^2.2.0",
+    "async": "^2.6.1",
+    "axios": "0.19.2",
+    "bcrypt-nodejs": "0.0.3",
+    "cookie": "0.4.0",
+    "cors": "^2.8.4",
+    "dotenv": "8.2.0",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
+    "mongoose": "^5.9.14",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.0",
+    "node-gcm": "^1.0.2",
+    "node-libcurl": "^2.3.3",
+    "nodemailer": "^5.1.1",
+    "nodemon": "^1.19.4",
+    "redis": "2.8.0",
+    "request-promise": "^4.2.6",
+    "sharp": "^0.26.0",
+    "socket.io": "^4.1.0",
+    "socket.io-redis": "^6.0.1",
+    "web-push": "^3.4.4"
+  }
+}
