@@ -23,7 +23,38 @@ const mongoose = require("mongoose");
 //         }
 //     })
 // };
+exports.getCustomItemsOfRecipe = (req, res) => {
+  let query_value = req.params.item_id;
 
+Items.find({ _id: query_value }, (err, item_list) => {
+    console.log('=======item_list',item_list);
+  if (err) {
+    console.error({
+      status: 0,
+      message: "Error finding Item on that branch",
+      error: err,
+    });
+    res.status(500).json({
+      status: 0,
+      message: "Error finding Item on that particular branch",
+      error: "Problem with server",
+    });
+  }
+  if (!item_list.length) {
+    res.status(200).json({
+      status: 0,
+      message: "No items found on a particular branch",
+      error: "No items asscoiated with the passed branch parameter",
+    });
+  } else {
+    res.status(200).json({
+      status: 1,
+      message: "Data Obtained Successfully",
+      item_list: item_list,
+    });
+  }
+});
+};
 /**
  * Get Items of a particular Category Type
  * @param categoryId

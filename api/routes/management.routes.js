@@ -463,6 +463,10 @@ router
 router
     .route('/inventory/recipes/full/:branchId')
     .get(Recipe.getFullRecipes)
+
+router
+    .route('/inventory/recipes/custom/:item_id')
+    .get(Item.getCustomItemsOfRecipe)
 /**
  * Material Stock Routes
  */
